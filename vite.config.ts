@@ -2,6 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
+const repoName = process.env.GITHUB_REPOSITORY
+  ? process.env.GITHUB_REPOSITORY.split('/')[1]
+  : ''
+
 export default defineConfig({
   plugins: [
     react(),
@@ -58,6 +62,7 @@ export default defineConfig({
       }
     })
   ],
+  base: process.env.GITHUB_ACTIONS && repoName ? `/${repoName}/` : '/',
   server: {
     port: 3000,
     host: true, // Allows access from network devices (0.0.0.0)
