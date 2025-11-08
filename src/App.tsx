@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import HomePage from './pages/HomePage'
 import LinkPage from './pages/LinkPage'
@@ -8,9 +8,12 @@ import Register from './pages/Register'
 import GamePage from './pages/GamePage'
 import './serviceWorker'
 
+const RouterComponent =
+  import.meta.env.MODE === 'production' ? HashRouter : BrowserRouter
+
 function App() {
   return (
-    <Router>
+    <RouterComponent>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<HomePage />} />
@@ -20,7 +23,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/game" element={<GamePage />} />
       </Routes>
-    </Router>
+    </RouterComponent>
   )
 }
 
