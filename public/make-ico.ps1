@@ -1,0 +1,1 @@
+Add-Type -AssemblyName System.Drawing;  = New-Object System.Drawing.Bitmap(\'logo.jpeg\');  = [System.Drawing.Icon]::FromHandle(.GetHicon());  = New-Object System.IO.FileStream(\'favicon.ico\', [System.IO.FileMode]::Create); .Save(); .Close(); .Dispose(); .Dispose();

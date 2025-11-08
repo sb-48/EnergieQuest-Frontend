@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'robots.txt', 'logo-circle-lightning.svg'],
+      includeAssets: ['favicon.ico', 'logo.jpeg', 'robots.txt'],
       manifest: {
         name: 'Optimizer Game',
         short_name: 'Optimizer',
@@ -16,8 +16,8 @@ export default defineConfig({
         background_color: '#667eea',
         display: 'standalone',
         orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
+        scope: './',
+        start_url: './',
         icons: [
           {
             src: 'logo-circle-lightning.svg',

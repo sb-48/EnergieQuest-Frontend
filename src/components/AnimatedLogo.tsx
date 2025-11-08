@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import logoImage from '../assets/logo.jpeg'
 import './AnimatedLogo.css'
 
 const AnimatedLogo = () => {
@@ -20,7 +21,7 @@ const AnimatedLogo = () => {
       {/* Logo image - falls from top */}
       <div ref={logoRef} className="logo-wrapper">
         <img
-          src="/logo.jpeg"
+          src={logoImage}
           alt="Optimizer Logo"
           className="logo-image"
         />

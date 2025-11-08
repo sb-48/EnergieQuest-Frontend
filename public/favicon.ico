@@ -1,0 +1,20 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circle with gradient - Blue/Energy colors -->
+  <defs>
+    <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lightningGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FCD34D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="url(#circleGrad)" stroke="#1E3A8A" stroke-width="3"/>
+  
+  <!-- Lightning bolt inside circle - Yellow/Orange/Red -->
+  <path d="M 90 50 L 110 50 L 100 80 L 120 80 L 80 150 L 100 120 L 90 120 Z" 
+        fill="url(#lightningGrad)" 
+        stroke="none"/>
+</svg>
