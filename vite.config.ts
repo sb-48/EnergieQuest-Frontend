@@ -58,6 +58,7 @@ export default defineConfig({
       }
     })
   ],
+  base: './',
   server: {
     port: 3000,
     host: true, // Allows access from network devices (0.0.0.0)
