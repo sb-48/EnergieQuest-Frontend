@@ -1,0 +1,246 @@
+.game-page {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow-x: hidden;
+}
+
+.game-header {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.back-button:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.game-header h1 {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 700;
+  margin: 0;
+}
+
+.game-main {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.progress-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.level-display {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.level-display h2 {
+  font-size: 1.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.level-number {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #667eea;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.level-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.level-grid {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.level-grid h3 {
+  font-size: 1.25rem;
+  color: #667eea;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.levels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.level-button {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  min-height: 60px;
+}
+
+.level-button.unlocked {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.level-button.locked {
+  background: #e0e0e0;
+  color: #999;
+}
+
+.level-button:active.unlocked {
+  transform: scale(0.95);
+}
+
+.notification-button {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+}
+
+.notification-button:active {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0.98);
+}
+
+.complete-button {
+  padding: 1rem;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 56px;
+}
+
+.complete-button:active {
+  transform: scale(0.98);
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .game-header {
+    padding: 1.5rem 2rem;
+  }
+
+  .game-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .game-main {
+    padding: 2rem;
+  }
+
+  .levels {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .level-number {
+    font-size: 5rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .game-header {
+    padding: 2rem 3rem;
+  }
+
+  .back-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .level-button:hover.unlocked {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+  }
+
+  .notification-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .complete-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .complete-button:active {
+    transform: scale(0.98);
+  }
+}
+

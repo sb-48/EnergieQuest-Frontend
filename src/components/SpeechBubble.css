@@ -1,0 +1,101 @@
+.speech-bubble-container {
+  position: absolute;
+  top: calc(30% - 20px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  animation: speechBubbleFadeIn 0.5s ease-out 1.3s forwards;
+}
+
+@keyframes speechBubbleFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.speech-bubble {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(102, 126, 234, 0.4);
+  animation: bubbleFloat 3s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+
+.speech-arrow {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(255, 255, 255, 0.8);
+}
+
+.speech-text {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes bubbleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .speech-bubble-container {
+    top: calc(25% - 20px);
+    width: 85%;
+    max-width: 400px;
+  }
+
+  .speech-bubble {
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .speech-text {
+    font-size: 0.875rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .speech-bubble-container {
+    top: calc(30% - 20px);
+    max-width: 600px;
+  }
+
+  .speech-bubble {
+    padding: 2rem 2.5rem;
+    border-radius: 24px;
+  }
+
+  .speech-text {
+    font-size: 1.125rem;
+  }
+}

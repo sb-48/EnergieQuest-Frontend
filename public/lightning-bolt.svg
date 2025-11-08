@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lightning bolt outline only - no fill -->
+  <path d="M 90 50 L 110 50 L 100 80 L 120 80 L 80 150 L 100 120 L 90 120 Z" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="6"
+        stroke-linejoin="round"
+        stroke-linecap="round"/>
+</svg>
+

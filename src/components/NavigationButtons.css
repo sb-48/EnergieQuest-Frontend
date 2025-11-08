@@ -1,0 +1,54 @@
+.navigation-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-arrow {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  font: inherit;
+}
+
+.nav-arrow:hover:not(.disabled),
+.nav-arrow:active:not(.disabled) {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.nav-arrow.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.nav-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .nav-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-arrow:hover:not(.disabled) {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  }
+}
+

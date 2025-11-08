@@ -1,0 +1,22 @@
+.avatar-container {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  animation: minionEnter 1s ease-out forwards;
+  transform: translateX(100vw);
+}
+
+@keyframes minionEnter {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
