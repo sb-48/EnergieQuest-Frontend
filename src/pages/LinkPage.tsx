@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import BurgerMenu from '../components/BurgerMenu'
 import NavigationButtons from '../components/NavigationButtons'
 import { LevelService } from '../utils/levelService'
-import Avatar3D from '../components/Avatar3D'
 import SpeechBubble from '../components/SpeechBubble'
 import { supabase } from '../utils/supabase'
 import './LinkPage.css'
@@ -173,10 +172,9 @@ const LinkPage = () => {
           </div>
         </div>
 
-        {/* Lower half - 3D Avatar with speech bubble */}
+        {/* Guidance area */}
         <div className="link-section link-section-bottom">
           <SpeechBubble message={speechMessage} />
-          <Avatar3D />
         </div>
       </main>
 

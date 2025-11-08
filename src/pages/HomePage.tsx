@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import BurgerMenu from '../components/BurgerMenu'
 import NavigationButtons from '../components/NavigationButtons'
+import crownImage from '../assets/krone.svg'
 import './HomePage.css'
 
 const HomePage = () => {
@@ -22,7 +23,7 @@ const HomePage = () => {
       <main className="homepage-main">
         <div className="crown-container">
           <img
-            src="/assets/krone.svg"
+            src={crownImage}
             alt="Krone"
             className="crown-image"
           />

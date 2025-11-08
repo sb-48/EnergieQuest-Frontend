@@ -51,6 +51,7 @@
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
+  padding: 2.5rem 1rem;
 }
 
 .link-content {
