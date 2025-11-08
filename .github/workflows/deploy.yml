@@ -25,14 +25,11 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        run: npm ci
-        working-directory: ./Frontend
+        run: npm ci --prefix Frontend
       - name: Build frontend
-        run: npm run build
-        working-directory: ./Frontend
+        run: npm run build --prefix Frontend
       - name: Prepare SPA fallback
-        run: cp dist/index.html dist/404.html
-        working-directory: ./Frontend
+        run: cp Frontend/dist/index.html Frontend/dist/404.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
