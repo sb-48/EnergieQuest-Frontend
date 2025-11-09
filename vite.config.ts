@@ -30,7 +30,7 @@ export default defineConfig({
             type: 'image/svg+xml'
           },
           {
-            src: 'logo-circle-lightning.svg',
+            src: 'logo.png',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'any maskable'

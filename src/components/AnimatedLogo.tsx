@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import logoImage from '../assets/logo.jpeg'
+import logoImage from '../assets/logo.png'
 import './AnimatedLogo.css'
 
 const AnimatedLogo = () => {
@@ -27,21 +27,19 @@ const AnimatedLogo = () => {
         />
       </div>
 
-      {/* OPTIMIZER text with copyright - positioned lower, less prominent */}
+      {/* ENERGIEQUEST text with copyright - positioned lower, less prominent */}
       <div className="optimizer-container">
         <div className="logo-text-wrapper-optimizer">
-          <span className="letter">O</span>
-          <span className="letter">P</span>
-          <span className="letter">T</span>
-          <span className="letter">I</span>
-          <span className="letter">M</span>
-          <span className="letter">I</span>
-          <span className="letter">Z</span>
-          <span className="letter">E</span>
-          <span className="letter letter-r">
-            R
-            <span className="copyright">©</span>
-          </span>
+          {Array.from('ENERGIEQUEST').map((char, index) => (
+            <span
+              key={char + index}
+              className={`letter${index === 8 ? ' letter-r' : ''}`}
+              style={{ animationDelay: `${1.3 + index * 0.1}s` }}
+            >
+              {char}
+            </span>
+          ))}
+          <span className="copyright">©</span>
         </div>
       </div>
     </div>
