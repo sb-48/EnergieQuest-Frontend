@@ -40,13 +40,13 @@
 
 .nav-login {
   background: transparent;
-  color: white;
-  border-color: rgba(255, 255, 255, 0.5);
+  color: #000000;
+  border-color: rgba(0, 0, 0, 0.5);
 }
 
 .nav-login:active {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: white;
+  background: rgba(0, 0, 0, 0.2);
+  border-color: #000000;
 }
 
 .nav-register {
@@ -97,8 +97,8 @@
   }
 
   .nav-login:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: white;
+    background: rgba(0, 0, 0, 0.1);
+    border-color: #000000;
   }
 
   .nav-register:hover {

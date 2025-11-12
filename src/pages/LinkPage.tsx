@@ -178,6 +178,15 @@ const LinkPage = () => {
         </div>
       </main>
 
+      {/* Andre image at the bottom */}
+      <div className="andre-image-container">
+        <img 
+          src="./assets/Andre.png" 
+          alt="Andre" 
+          className="andre-image"
+        />
+      </div>
+
       {/* OPTIMIZER footer */}
       <div className="optimizer-footer">
         <span className="optimizer-text">OPTIMIZER</span>

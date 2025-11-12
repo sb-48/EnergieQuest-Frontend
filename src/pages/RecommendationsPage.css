@@ -45,7 +45,7 @@
 .recommendations-title {
   font-size: 2rem;
   font-weight: 700;
-  color: white;
+  color: #000000;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -55,7 +55,7 @@
 .recommendations-empty {
   text-align: center;
   padding: 2rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   font-size: 1rem;
 }
 
@@ -66,18 +66,18 @@
 .recommendations-table-container {
   overflow-x: auto;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .recommendations-table {
   width: 100%;
   border-collapse: collapse;
-  color: white;
+  color: #000000;
 }
 
 .recommendations-table thead {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .recommendations-table th {
@@ -85,15 +85,15 @@
   text-align: left;
   font-weight: 600;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: rgba(0, 0, 0, 0.9);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   white-space: nowrap;
 }
 
 .recommendations-table td {
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 0.9rem;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .recommendations-table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .recommendations-table tbody tr:last-child td {
@@ -151,7 +151,7 @@
   gap: 0.25rem;
   z-index: 5;
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   font-weight: 400;
 }
 
