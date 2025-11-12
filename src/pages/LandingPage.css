@@ -5,6 +5,7 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  background: #C6DAF1;
 }
 
 .landing-header {
