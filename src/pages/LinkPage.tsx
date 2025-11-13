@@ -178,11 +178,11 @@ const LinkPage = () => {
         </div>
       </main>
 
-      {/* Andre image at the bottom */}
+      {/* Nine image at the bottom */}
       <div className="andre-image-container">
         <img 
-          src="./assets/Andre.png" 
-          alt="Andre" 
+          src="./assets/nine.jpg" 
+          alt="Nine" 
           className="andre-image"
         />
       </div>
