@@ -65,6 +65,9 @@ const BurgerMenu = () => {
               <Link to="/recommendations" onClick={closeMenu} className="burger-link">
                 Empfehlungen
               </Link>
+              <Link to="/upload" onClick={closeMenu} className="burger-link">
+                Dateien hochladen
+              </Link>
               <Link to="/game" onClick={closeMenu} className="burger-link">
                 Spiel
               </Link>
