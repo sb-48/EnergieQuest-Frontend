@@ -79,6 +79,8 @@
 
 .link-section-top {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1rem;
+  align-items: flex-start;
 }
 
 .link-section-bottom {
@@ -98,6 +100,8 @@
 .link-content {
   text-align: center;
   z-index: 2;
+  width: 100%;
+  padding-top: 0;
 }
 
 .link-title {
@@ -304,6 +308,10 @@
     padding: 1.5rem 2rem;
   }
 
+  .link-section-top {
+    padding-top: 1.5rem;
+  }
+
   .link-title {
     font-size: 2.5rem;
   }
@@ -319,6 +327,10 @@
 @media (min-width: 1024px) {
   .link-header {
     padding: 2rem 3rem;
+  }
+
+  .link-section-top {
+    padding-top: 2rem;
   }
 
   .link-title {

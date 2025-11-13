@@ -50,6 +50,24 @@
   min-height: 0;
 }
 
+/* Level header */
+.homepage-level-header {
+  width: 100%;
+  padding: 1rem 1rem 0.5rem 1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-level-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  text-align: center;
+}
+
 /* Upper and lower sections - 50% each */
 .homepage-section {
   flex: 1;
@@ -159,6 +177,14 @@
     padding: 1.5rem 2rem;
   }
 
+  .homepage-level-header {
+    padding: 1.5rem 2rem 0.5rem 2rem;
+  }
+
+  .homepage-level-title {
+    font-size: 2.5rem;
+  }
+
   .optimizer-footer {
     bottom: 1.5rem;
     left: 2rem;
@@ -174,6 +200,14 @@
 @media (min-width: 1024px) {
   .homepage-header {
     padding: 2rem 3rem;
+  }
+
+  .homepage-level-header {
+    padding: 2rem 3rem 0.5rem 3rem;
+  }
+
+  .homepage-level-title {
+    font-size: 3rem;
   }
 
   .homepage-main {

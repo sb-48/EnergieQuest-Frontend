@@ -71,6 +71,7 @@ const Login = () => {
       if (data.session) {
         sessionStorage.setItem('authToken', data.session.access_token)
         sessionStorage.setItem('user', JSON.stringify(data.user))
+        sessionStorage.setItem('userEmail', data.user.email || '')
         sessionStorage.setItem('loggedInUser', data.user.email || '')
         sessionStorage.setItem('isLoggedIn', 'true')
       }

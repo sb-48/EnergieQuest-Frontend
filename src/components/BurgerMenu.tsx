@@ -6,7 +6,21 @@ const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const navigate = useNavigate()
   const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true'
-  const userEmail = sessionStorage.getItem('userEmail')
+  
+  // Get user email from sessionStorage
+  let userEmail = sessionStorage.getItem('userEmail')
+  if (!userEmail) {
+    // Fallback: try to get email from user object
+    const userStr = sessionStorage.getItem('user')
+    if (userStr) {
+      try {
+        const user = JSON.parse(userStr)
+        userEmail = user.email || ''
+      } catch (e) {
+        userEmail = ''
+      }
+    }
+  }
 
   const handleLogout = () => {
     sessionStorage.removeItem('isLoggedIn')
@@ -40,7 +54,7 @@ const BurgerMenu = () => {
           {isLoggedIn ? (
             <>
               <div className="burger-user-info">
-                <span className="burger-email">{userEmail || 'dummy@optimizer.com'}</span>
+                <span className="burger-email">{userEmail || 'Nicht angemeldet'}</span>
               </div>
               <Link to="/home" onClick={closeMenu} className="burger-link">
                 Home
