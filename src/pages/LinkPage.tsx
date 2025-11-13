@@ -105,7 +105,7 @@ const LinkPage = () => {
   }
 
   const speechMessage = recommendationLink
-    ? "Super! Teile diesen Empfehlungslink mit deinen Freunden. Wenn sich jemand darüber registriert, wird die Verknüpfung erstellt!" 
+    ? "JETZT DEN LINK TEILEN!" 
     : "Hallo! Melde dich an, um deinen persönlichen Empfehlungslink zu erhalten!"
 
   if (loading) {
@@ -125,11 +125,13 @@ const LinkPage = () => {
 
   return (
     <div className="link-page">
-      <header className="link-header">
-        <BurgerMenu />
-      </header>
+      <div className="link-top-bar">
+        <header className="link-header">
+          <BurgerMenu />
+        </header>
 
-      <NavigationButtons />
+        <NavigationButtons />
+      </div>
 
       <main className="link-main">
         {/* Upper half - Link display */}
@@ -137,7 +139,7 @@ const LinkPage = () => {
           <div className="link-content">
             <h1 className="link-title">Empfehlungslink</h1>
             <p className="link-description">
-              Teile diesen Link mit deinen Freunden! Wenn sich jemand über deinen Link registriert, 
+              Teile diesen Link! Wenn sich jemand über deinen Link registriert, 
               wird automatisch eine Verknüpfung in deinem Empfehlungsprofil erstellt.
             </p>
             
@@ -175,17 +177,16 @@ const LinkPage = () => {
         {/* Guidance area */}
         <div className="link-section link-section-bottom">
           <SpeechBubble message={speechMessage} />
+          {/* Eule image */}
+          <div className="andre-image-container">
+            <img 
+              src="./assets/eule.png" 
+              alt="Eule" 
+              className="andre-image"
+            />
+          </div>
         </div>
       </main>
-
-      {/* Nine image at the bottom */}
-      <div className="andre-image-container">
-        <img 
-          src="./assets/nine.jpg" 
-          alt="Nine" 
-          className="andre-image"
-        />
-      </div>
 
       {/* OPTIMIZER footer */}
       <div className="optimizer-footer">

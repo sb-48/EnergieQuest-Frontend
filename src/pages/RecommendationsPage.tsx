@@ -107,11 +107,13 @@ const RecommendationsPage = () => {
 
   return (
     <div className="recommendations-page">
-      <header className="recommendations-header">
-        <BurgerMenu />
-      </header>
+      <div className="recommendations-top-bar">
+        <header className="recommendations-header">
+          <BurgerMenu />
+        </header>
 
-      <NavigationButtons />
+        <NavigationButtons />
+      </div>
 
       <main className="recommendations-main">
         <div className="recommendations-container">

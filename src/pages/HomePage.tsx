@@ -14,19 +14,35 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      <header className="homepage-header">
-        <BurgerMenu />
-      </header>
+      <div className="homepage-top-bar">
+        <header className="homepage-header">
+          <BurgerMenu />
+        </header>
 
-      <NavigationButtons />
+        <NavigationButtons />
+      </div>
 
       <main className="homepage-main">
-        <div className="crown-container">
-          <img
-            src={crownImage}
-            alt="Krone"
-            className="crown-image"
-          />
+        {/* Upper half - Crown */}
+        <div className="homepage-section homepage-section-top">
+          <div className="crown-container">
+            <img
+              src={crownImage}
+              alt="Krone"
+              className="crown-image"
+            />
+          </div>
+        </div>
+
+        {/* Lower half - Eule */}
+        <div className="homepage-section homepage-section-bottom">
+          <div className="andre-image-container">
+            <img 
+              src="./assets/eule.png" 
+              alt="Eule" 
+              className="andre-image"
+            />
+          </div>
         </div>
       </main>
 
