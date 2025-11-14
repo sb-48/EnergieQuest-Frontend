@@ -4,19 +4,10 @@ import './BottomNavigation.css'
 const navItems = [
   {
     label: 'Start',
-    path: '/',
-    icon: (
-      <svg viewBox="0 0 24 24">
-        <path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-5h-6v5H4a1 1 0 01-1-1v-9z" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Home',
     path: '/home',
     icon: (
       <svg viewBox="0 0 24 24">
-        <path d="M5 20h14M5 12l7-7 7 7v8a1 1 0 01-1 1h-4v-4h-4v4H6a1 1 0 01-1-1v-8z" />
+        <path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-5h-6v5H4a1 1 0 01-1-1v-9z" />
       </svg>
     ),
   },
