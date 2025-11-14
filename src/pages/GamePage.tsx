@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { LevelService, UserProgress } from '../utils/levelService'
 import { notificationService } from '../utils/notificationService'
+import BottomNavigation from '../components/BottomNavigation'
 import './GamePage.css'
 
 const GamePage = () => {
@@ -48,7 +49,7 @@ const GamePage = () => {
   }
 
   return (
-    <div className="game-page">
+    <div className="game-page page-with-bottom-nav">
       <header className="game-header">
         <Link to="/home" className="back-button">← Zurück</Link>
         <h1>Optimizer Spiel</h1>
@@ -103,6 +104,7 @@ const GamePage = () => {
           </button>
         </div>
       </main>
+      <BottomNavigation />
     </div>
   )
 }

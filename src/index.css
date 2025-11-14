@@ -24,6 +24,33 @@ body {
   height: 100%;
 }
 
+button {
+  background-color: #6CB4EE !important;
+  border: 2px solid #6CB4EE !important;
+  color: #FFFFFF !important;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #5AA5E0 !important;
+}
+
+button:disabled {
+  background-color: rgba(108, 180, 238, 0.6) !important;
+  border-color: rgba(108, 180, 238, 0.6) !important;
+  cursor: not-allowed;
+}
+
+.page-with-bottom-nav {
+  padding-bottom: 76px;
+}
+
+@media (min-width: 1025px) {
+  .page-with-bottom-nav {
+    padding-bottom: 0;
+  }
+}
+
 #root {
   min-height: 100vh;
   width: 100%;

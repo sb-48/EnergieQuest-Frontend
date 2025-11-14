@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import AnimatedLogo from '../components/AnimatedLogo'
+import BottomNavigation from '../components/BottomNavigation'
 import './LandingPage.css'
 
 const LandingPage = () => {
@@ -20,7 +21,7 @@ const LandingPage = () => {
   }, [navigate])
 
   return (
-    <div className="landing-page">
+    <div className="landing-page page-with-bottom-nav">
       <header className="landing-header">
         <nav className="landing-nav">
           <Link to="/login" className="nav-button nav-login">
@@ -37,6 +38,7 @@ const LandingPage = () => {
           <AnimatedLogo />
         </div>
       </main>
+      <BottomNavigation />
     </div>
   )
 }

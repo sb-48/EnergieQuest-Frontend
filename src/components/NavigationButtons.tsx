@@ -6,12 +6,9 @@ const NavigationButtons = () => {
   const location = useLocation()
 
   const handlePrevious = () => {
-    // Navigation logic - go back or to previous screen
     if (location.pathname === '/upload') {
       navigate('/recommendations')
     } else if (location.pathname === '/recommendations') {
-      navigate('/link')
-    } else if (location.pathname === '/link') {
       navigate('/home')
     } else if (location.pathname === '/home') {
       navigate('/')
@@ -19,17 +16,12 @@ const NavigationButtons = () => {
   }
 
   const handleNext = () => {
-    // Navigation logic - go forward or to next screen
     if (location.pathname === '/') {
       navigate('/home')
     } else if (location.pathname === '/home') {
-      navigate('/link')
-    } else if (location.pathname === '/link') {
       navigate('/recommendations')
     } else if (location.pathname === '/recommendations') {
       navigate('/upload')
-    } else if (location.pathname === '/upload') {
-      // Already on last page
     }
   }
 

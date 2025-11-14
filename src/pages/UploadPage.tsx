@@ -1,6 +1,7 @@
 import { ChangeEvent, useEffect, useRef, useState } from 'react'
 import BurgerMenu from '../components/BurgerMenu'
 import NavigationButtons from '../components/NavigationButtons'
+import BottomNavigation from '../components/BottomNavigation'
 import { supabase } from '../utils/supabase'
 import './UploadPage.css'
 
@@ -322,7 +323,7 @@ const UploadPage = () => {
 
   if (loading) {
     return (
-      <div className="upload-page">
+      <div className="upload-page page-with-bottom-nav">
         <header className="upload-header">
           <BurgerMenu />
         </header>
@@ -331,19 +332,14 @@ const UploadPage = () => {
             <p>Lade...</p>
           </div>
         </main>
+        <BottomNavigation />
       </div>
     )
   }
 
   return (
-    <div className="upload-page">
-      <div className="upload-top-bar">
-        <header className="upload-header">
-          <BurgerMenu />
-        </header>
-
-        <NavigationButtons />
-      </div>
+    <div className="upload-page page-with-bottom-nav">
+     
 
       <main className="upload-main">
         <div className="upload-container">
@@ -423,6 +419,7 @@ const UploadPage = () => {
         <span className="optimizer-text">OPTIMIZER</span>
         <span className="copyright-footer">©</span>
       </div>
+      <BottomNavigation />
     </div>
   )
 }

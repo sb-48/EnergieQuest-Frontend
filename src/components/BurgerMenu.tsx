@@ -59,9 +59,6 @@ const BurgerMenu = () => {
               <Link to="/home" onClick={closeMenu} className="burger-link">
                 Home
               </Link>
-              <Link to="/link" onClick={closeMenu} className="burger-link">
-                Empfehlungslink
-              </Link>
               <Link to="/recommendations" onClick={closeMenu} className="burger-link">
                 Empfehlungen
               </Link>

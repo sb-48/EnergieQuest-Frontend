@@ -1,7 +1,6 @@
 import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import HomePage from './pages/HomePage'
-import LinkPage from './pages/LinkPage'
 import RecommendationsPage from './pages/RecommendationsPage'
 import UploadPage from './pages/UploadPage'
 import Login from './pages/Login'
@@ -18,7 +17,6 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<HomePage />} />
-        <Route path="/link" element={<LinkPage />} />
         <Route path="/recommendations" element={<RecommendationsPage />} />
         <Route path="/upload" element={<UploadPage />} />
         <Route path="/login" element={<Login />} />

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { supabase } from '../utils/supabase'
 import BurgerMenu from '../components/BurgerMenu'
 import NavigationButtons from '../components/NavigationButtons'
+import BottomNavigation from '../components/BottomNavigation'
 import './RecommendationsPage.css'
 
 interface RecommendedUser {
@@ -106,14 +107,8 @@ const RecommendationsPage = () => {
   }, [])
 
   return (
-    <div className="recommendations-page">
-      <div className="recommendations-top-bar">
-        <header className="recommendations-header">
-          <BurgerMenu />
-        </header>
-
-        <NavigationButtons />
-      </div>
+    <div className="recommendations-page page-with-bottom-nav">
+      
 
       <main className="recommendations-main">
         <div className="recommendations-container">
@@ -182,6 +177,7 @@ const RecommendationsPage = () => {
         <span className="optimizer-text">OPTIMIZER</span>
         <span className="copyright-footer">©</span>
       </div>
+      <BottomNavigation />
     </div>
   )
 }
