@@ -30,11 +30,12 @@ const navItems = [
     ),
   },
   {
-    label: 'Spiel',
+    label: 'Gutscheine',
     path: '/game',
     icon: (
       <svg viewBox="0 0 24 24">
-        <path d="M6 8h4l1-2h2l1 2h4a2 2 0 012 2v6a2 2 0 01-2 2h-2l-2-2H8l-2 2H4a2 2 0 01-2-2v-6a2 2 0 012-2zm0 4h2m8 0h2" />
+        <path d="M4 7h16a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1zm3 0v10m10-10v10" />
+        <path d="M8 10h3m-3 4h2m6-4h2m-2 4h1" />
       </svg>
     ),
   },
