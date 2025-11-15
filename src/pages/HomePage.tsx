@@ -3,6 +3,7 @@ import BottomNavigation from '../components/BottomNavigation'
 import { LevelService } from '../utils/levelService'
 import SpeechBubble from '../components/SpeechBubble'
 import { supabase } from '../utils/supabase'
+import { storage } from '../utils/storage'
 import './HomePage.css'
 
 const HomePage = () => {
@@ -20,7 +21,7 @@ const HomePage = () => {
   useEffect(() => {
     const loadUserRef = async () => {
       try {
-        const userStr = sessionStorage.getItem('user')
+        const userStr = storage.get('user')
         if (userStr) {
           const user = JSON.parse(userStr)
 

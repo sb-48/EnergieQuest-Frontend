@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase } from '../utils/supabase'
+import { storage } from '../utils/storage'
 import './Auth.css'
 
 const Login = () => {
@@ -69,11 +70,11 @@ const Login = () => {
 
       // Success - store session and redirect
       if (data.session) {
-        sessionStorage.setItem('authToken', data.session.access_token)
-        sessionStorage.setItem('user', JSON.stringify(data.user))
-        sessionStorage.setItem('userEmail', data.user.email || '')
-        sessionStorage.setItem('loggedInUser', data.user.email || '')
-        sessionStorage.setItem('isLoggedIn', 'true')
+        storage.set('authToken', data.session.access_token)
+        storage.setJSON('user', data.user)
+        storage.set('userEmail', data.user.email || '')
+        storage.set('loggedInUser', data.user.email || '')
+        storage.set('isLoggedIn', 'true')
       }
 
       navigate('/home')

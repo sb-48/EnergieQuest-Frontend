@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import AnimatedLogo from '../components/AnimatedLogo'
-import BottomNavigation from '../components/BottomNavigation'
+import { storage } from '../utils/storage'
 import './LandingPage.css'
 
 const LandingPage = () => {
@@ -14,14 +14,14 @@ const LandingPage = () => {
     }
 
     // Check if user is logged in - redirect to /home
-    const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true'
+    const isLoggedIn = storage.get('isLoggedIn') === 'true'
     if (isLoggedIn) {
       navigate('/home')
     }
   }, [navigate])
 
   return (
-    <div className="landing-page page-with-bottom-nav">
+    <div className="landing-page">
       <header className="landing-header">
         <nav className="landing-nav">
           <Link to="/login" className="nav-button nav-login">
@@ -38,7 +38,6 @@ const LandingPage = () => {
           <AnimatedLogo />
         </div>
       </main>
-      <BottomNavigation />
     </div>
   )
 }

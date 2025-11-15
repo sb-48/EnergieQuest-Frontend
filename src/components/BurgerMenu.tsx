@@ -1,17 +1,19 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { storage } from '../utils/storage'
+import { supabase } from '../utils/supabase'
 import './BurgerMenu.css'
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const navigate = useNavigate()
-  const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true'
+  const isLoggedIn = storage.get('isLoggedIn') === 'true'
   
-  // Get user email from sessionStorage
-  let userEmail = sessionStorage.getItem('userEmail')
+  // Get user email from persistent storage
+  let userEmail = storage.get('userEmail')
   if (!userEmail) {
     // Fallback: try to get email from user object
-    const userStr = sessionStorage.getItem('user')
+    const userStr = storage.get('user')
     if (userStr) {
       try {
         const user = JSON.parse(userStr)
@@ -22,9 +24,9 @@ const BurgerMenu = () => {
     }
   }
 
-  const handleLogout = () => {
-    sessionStorage.removeItem('isLoggedIn')
-    sessionStorage.removeItem('userEmail')
+  const handleLogout = async () => {
+    await supabase.auth.signOut()
+    storage.clearKeys(['isLoggedIn', 'userEmail', 'user', 'authToken', 'loggedInUser'])
     setIsOpen(false)
     navigate('/')
   }
@@ -66,7 +68,7 @@ const BurgerMenu = () => {
                 Dateien hochladen
               </Link>
               <Link to="/game" onClick={closeMenu} className="burger-link">
-                Spiel
+                Gutscheine
               </Link>
               <button onClick={handleLogout} className="burger-link burger-logout">
                 Abmelden

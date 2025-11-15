@@ -1,8 +1,9 @@
 import { ChangeEvent, useEffect, useRef, useState } from 'react'
+import type { User } from '@supabase/supabase-js'
 import BurgerMenu from '../components/BurgerMenu'
-import NavigationButtons from '../components/NavigationButtons'
 import BottomNavigation from '../components/BottomNavigation'
 import { supabase } from '../utils/supabase'
+import { storage } from '../utils/storage'
 import './UploadPage.css'
 
 const BUCKET_NAME = 'user-uploads'
@@ -25,11 +26,7 @@ interface StoredUpload {
   created_at: string
 }
 
-interface StoredUser {
-  id: string
-  email?: string
-  [key: string]: unknown
-}
+type StoredUser = Partial<User> & { id: string }
 
 const UploadPage = () => {
   const [user, setUser] = useState<StoredUser | null>(null)
@@ -49,7 +46,7 @@ const UploadPage = () => {
           setUser(session.user)
         } else {
           // Fallback to sessionStorage
-          const userStr = sessionStorage.getItem('user')
+          const userStr = storage.get('user')
           if (userStr) {
             const userData = JSON.parse(userStr)
             setUser(userData)
@@ -57,7 +54,7 @@ const UploadPage = () => {
         }
       } catch (error) {
         // Fallback to sessionStorage
-        const userStr = sessionStorage.getItem('user')
+        const userStr = storage.get('user')
         if (userStr) {
           try {
             const userData = JSON.parse(userStr)
